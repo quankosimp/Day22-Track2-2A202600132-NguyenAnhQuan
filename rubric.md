@@ -145,24 +145,24 @@
 ## Submission Checklist
 
 **Code files — all must run without errors:**
-- [ ] `01_langsmith_rag_pipeline.py`
-- [ ] `02_prompt_hub_ab_routing.py`
-- [ ] `03_ragas_evaluation.py`
-- [ ] `04_guardrails_validator.py`
-- [ ] `data/ragas_report.json` — exists and contains V1 + V2 scores
+- [x] `01_langsmith_rag_pipeline.py`
+- [x] `02_prompt_hub_ab_routing.py`
+- [x] `03_ragas_evaluation.py`
+- [x] `04_guardrails_validator.py`
+- [x] `data/ragas_report.json` — exists and contains V1 + V2 scores
 
 **Evidence folder — all required:**
-- [ ] `evidence/01_langsmith_traces.png` — LangSmith UI with ≥ 50 traces visible
-- [ ] `evidence/02_prompt_hub.png` — Prompt Hub UI showing 2 named prompt versions
-- [ ] `evidence/02_ab_routing_log.txt` — console log of A/B routing (50 queries, v1/v2 labels)
-- [ ] `evidence/03_ragas_scores.png` — terminal output with V1 vs V2 comparison table
-- [ ] `evidence/03_ragas_report.json` — copy of `data/ragas_report.json`
-- [ ] `evidence/04_pii_demo_log.txt` — console output of PII test cases
-- [ ] `evidence/04_json_demo_log.txt` — console output of JSON repair test cases
+- [x] `evidence/01_langsmith_traces.png` — LangSmith UI with ≥ 50 traces visible
+- [x] `evidence/02_prompt_hub.png` — Prompt Hub UI showing 2 named prompt versions
+- [x] `evidence/02_ab_routing_log.txt` — console log of A/B routing (50 queries, v1/v2 labels)
+- [x] `evidence/03_ragas_scores.png` — terminal output with V1 vs V2 comparison table
+- [x] `evidence/03_ragas_report.json` — copy of `data/ragas_report.json`
+- [x] `evidence/04_pii_demo_log.txt` — console output of PII test cases
+- [x] `evidence/04_json_demo_log.txt` — console output of JSON repair test cases
 
 **Submission:**
-- [ ] Public GitHub repo URL submitted
-- [ ] LangSmith project URL submitted (visible ≥ 100 total traces)
-- [ ] No `.env` file committed; no API keys in source code
+- [x] Public GitHub repo URL submitted
+- [x] LangSmith project URL submitted (visible ≥ 100 total traces)
+- [x] No `.env` file committed; no API keys in source code
 
 **Penalty: −10 pts if API keys are found in committed code.**

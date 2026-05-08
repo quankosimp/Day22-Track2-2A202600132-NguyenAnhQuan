@@ -304,6 +304,11 @@ Submit the following on the course portal / Google Form:
 2. **LangSmith project URL** — e.g. `https://smith.langchain.com/o/<org-id>/projects/p/<project-id>`
 3. Confirm `evidence/` folder exists in the repo with all required files
 
+### Submission Links
+
+1. **GitHub repo URL** — `https://github.com/quankosimp/Day22-Track2-2A202600132-NguyenAnhQuan`
+2. **LangSmith project URL** — `https://smith.langchain.com/o/a661717b-05b2-49aa-b269-9a6643b7b7cc/projects/p/806353a3-0a18-482a-95d5-f06791bbaf8d`
+
 > ⚠️ **Never commit your `.env` file or paste API keys in code.** Violation = automatic −10 pts.
 
 ---
