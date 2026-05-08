@@ -1,0 +1,77 @@
+=======================================================
+  Step 4: Guardrails AI Validators
+=======================================================
+
+=======================================================
+  PII Detection Demo
+=======================================================
+
+[Email]
+  Passed: True
+  Input:  Contact John at john.doe@example.com for details.
+  Output: Contact John at [EMAIL_REDACTED] for details.
+
+[Phone]
+  Passed: True
+  Input:  Call our support line at (555) 867-5309.
+  Output: Call our support line at [PHONE_REDACTED].
+
+[SSN]
+  Passed: True
+  Input:  Patient SSN is 123-45-6789 on file.
+  Output: Patient SSN is [SSN_REDACTED] on file.
+
+[Credit Card]
+  Passed: True
+  Input:  Payment made with card 4532 1234 5678 9010.
+  Output: Payment made with card [CREDIT_CARD_REDACTED].
+
+[Multi-PII]
+  Passed: True
+  Input:  Email: alice@example.com, Phone: 555-123-4567
+  Output: Email: [EMAIL_REDACTED], Phone: [PHONE_REDACTED]
+
+[Clean]
+  Passed: True
+  Input:  No sensitive information in this text.
+  Output: No sensitive information in this text.
+
+=======================================================
+  JSON Formatting Demo
+=======================================================
+
+[Valid JSON]
+  Passed: True
+  Input:  {"name": "Alice", "age": 30}
+  Output: {"name": "Alice", "age": 30}
+
+[Markdown fences]
+  Passed: True
+  Input:  ```json
+{"name": "Bob"}
+```
+  Output: {
+  "name": "Bob"
+}
+
+[Single quotes]
+  Passed: True
+  Input:  {'name': 'Charlie', 'score': 95}
+  Output: {
+  "name": "Charlie",
+  "score": 95
+}
+
+[Trailing comma]
+  Passed: True
+  Input:  {"key": "value",}
+  Output: {
+  "key": "value"
+}
+
+[Truly invalid]
+  Passed: True
+  Input:  This is not JSON at all: ??? {]
+  Output: {"error": "Invalid JSON after repair attempt: Expecting value", "raw": "This is not JSON at all: ??? {]"}
+
+Step 4 complete

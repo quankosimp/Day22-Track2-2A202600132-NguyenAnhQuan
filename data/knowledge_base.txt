@@ -1,0 +1,39 @@
+Machine Learning Basics
+
+Machine learning is commonly divided into three main types: supervised learning, unsupervised learning, and reinforcement learning. Supervised learning uses labeled examples, unsupervised learning finds patterns in unlabeled data, and reinforcement learning trains agents through rewards and penalties. Overfitting occurs when a model learns the training data too well, including noise, which leads to poor generalization on new data. The bias-variance tradeoff describes how high bias causes underfitting, high variance causes overfitting, and a useful model balances both to minimize total error. Regularization techniques such as L1 and L2 add penalty terms to the loss function to discourage overly complex models. Cross-validation splits data into multiple folds to estimate model performance more reliably.
+
+Neural Networks
+
+Backpropagation computes gradients of the loss with respect to each weight by applying the chain rule of calculus. Convolutional Neural Networks, or CNNs, are specialized for processing grid-like data such as images. Pooling layers in CNNs reduce spatial dimensions, decreasing computational complexity while retaining important features. LSTM networks address the vanishing gradient problem with gating mechanisms that control information flow through the network. Common activation functions in neural networks include ReLU, sigmoid, and tanh.
+
+Transformers and NLP
+
+The transformer architecture uses self-attention mechanisms and processes entire sequences in parallel. It was introduced in the 2017 paper "Attention Is All You Need." Word embeddings represent words as dense vectors where semantically similar words are geometrically close. Transfer learning in NLP often means pre-training large models on massive corpora and then fine-tuning them on downstream tasks. BERT handles language understanding through bidirectional transformer training with masked language modeling and next sentence prediction. Self-attention allows models to weigh the importance of different words relative to each other in a sequence.
+
+Large Language Models
+
+GPT models use autoregressive training to predict the next token given previous tokens and are trained on massive text datasets. Instruction tuning fine-tunes pre-trained LLMs on instruction-following datasets to improve alignment with human intent. Reinforcement Learning from Human Feedback, or RLHF, uses human preferences to align LLMs to be helpful, harmless, and honest. Chain-of-thought prompting encourages LLMs to show reasoning step by step, improving performance on complex tasks. GPT-4 supports up to 128K tokens of context.
+
+Retrieval-Augmented Generation
+
+Retrieval-Augmented Generation, or RAG, combines generative LLMs with retrieval from external knowledge bases to produce grounded, up-to-date answers. The main components of a RAG pipeline are a retriever that searches a document store and a generator, usually an LLM, that produces answers from the query and retrieved passages. Dense retrieval uses neural embeddings to encode queries and documents, then determines relevance by cosine similarity. Chunking strategy matters in RAG because it affects retrieval precision and context window fit; common options include fixed-size, semantic, and hierarchical chunking. Advanced RAG techniques include re-ranking, query expansion, HyDE, and iterative retrieval for multi-hop questions.
+
+Vector Search
+
+Vector databases store and query high-dimensional vector embeddings for fast similarity search. FAISS is a library for efficient similarity search supporting exact and approximate nearest neighbor algorithms. Text embeddings convert text into numerical vectors where semantically similar texts produce geometrically close vectors. HNSW builds a hierarchical graph for logarithmic-complexity approximate nearest neighbor search. Hybrid search combines dense vector search with sparse keyword search such as BM25, often using Reciprocal Rank Fusion.
+
+LangChain and LangSmith
+
+LangChain is an open-source framework for building LLM applications with abstractions for chains, agents, and data connections. LangChain Expression Language, or LCEL, is a declarative way to compose chains using the pipe operator and supports streaming, async, and batching. LangGraph extends LangChain for stateful multi-actor applications as directed graphs and supports cycles. LangChain memory types include ConversationBufferMemory, ConversationSummaryMemory, ConversationWindowMemory, and vector store memory. LangChain retrievers fetch relevant documents from a data source given a query and support vector stores and BM25.
+
+LangSmith
+
+LangSmith is a platform for debugging, testing, evaluating, and monitoring LLM applications through automatic tracing. LangSmith traces capture inputs, outputs, latency, token usage, and errors for every component in a chain. The LangSmith Prompt Hub is a repository for storing, versioning, and sharing prompt templates, supporting A/B testing and rollback. LangSmith helps monitor production LLM applications by providing latency percentiles, error rates, token costs, and feedback annotations. LangSmith datasets are used for systematic evaluation with example inputs and expected outputs to compare model versions or prompt changes.
+
+RAGAS
+
+RAGAS is an open-source framework for evaluating RAG pipelines using LLM-based reference-free metrics. RAGAS computes faithfulness by extracting claims from the answer and checking whether each claim can be inferred from the retrieved context. Answer relevancy measures how well the answer addresses the original question by generating synthetic questions from the answer. Context recall measures how well the retrieved context covers the information needed, evaluated against a ground truth reference. RAGAS evaluation requires user queries, generated answers, retrieved contexts as a list of passages, and optionally reference answers.
+
+Guardrails and AI Safety
+
+Guardrails AI is an open-source framework for adding validation and safety checks to LLM outputs with configurable on-fail actions. PII means Personally Identifiable Information; exposing it can violate privacy regulations such as GDPR and HIPAA. Structured output validation ensures that LLM responses conform to expected schemas such as JSON, detecting and fixing invalid formats. Constitutional AI is a technique where a model is given principles to follow and uses self-critique to improve its responses. Common AI safety concerns with LLMs include hallucination, toxicity, bias, PII leakage, and jailbreaking attacks.

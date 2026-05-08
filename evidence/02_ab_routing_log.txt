@@ -1,0 +1,160 @@
+============================================================
+  Step 2: Prompt Hub A/B Routing
+============================================================
+Prompt push skipped for day22-rag-prompt-v1: Conflict for /commits/-/day22-rag-prompt-v1. HTTPError('409 Client Error: Conflict for url: https://api.smith.langchain.com/commits/-/day22-rag-prompt-v1', '{"error":"Nothing to commit: prompt has not changed since latest commit"}\n')
+Prompt push skipped for day22-rag-prompt-v2: Conflict for /commits/-/day22-rag-prompt-v2. HTTPError('409 Client Error: Conflict for url: https://api.smith.langchain.com/commits/-/day22-rag-prompt-v2', '{"error":"Nothing to commit: prompt has not changed since latest commit"}\n')
+Pulled day22-rag-prompt-v1 from LangSmith Prompt Hub
+Pulled day22-rag-prompt-v2 from LangSmith Prompt Hub
+Split knowledge base into 30 chunks
+[01] [prompt-v2] What are the three main types of machine learning?
+     The three main types of machine learning are **supervised learning**, **unsupervised learning**, and **reinforcement learning**. Supervised learning uses **labe
+
+[02] [prompt-v1] What is overfitting in machine learning?
+     Overfitting occurs when a model learns the training data too well, including noise, which leads to poor generalization on new data.
+
+[03] [prompt-v1] Explain the bias-variance tradeoff.
+     The bias-variance tradeoff describes how high bias causes underfitting, while high variance causes overfitting. A useful model balances both to minimize total e
+
+[04] [prompt-v2] How does regularization prevent overfitting?
+     Regularization helps prevent overfitting by adding a penalty term to the loss function, which discourages the model from becoming overly complex. This pushes th
+
+[05] [prompt-v2] What is cross-validation?
+     Cross-validation is a model evaluation technique that splits a dataset into multiple folds and tests the model on different folds in turn. This helps estimate p
+
+[06] [prompt-v2] What is backpropagation?
+     Backpropagation is a method used to train neural networks by computing how much each weight contributes to the final error. It works by applying the chain rule 
+
+[07] [prompt-v2] What are Convolutional Neural Networks primarily used for?
+     Convolutional Neural Networks (CNNs) are primarily used for processing grid-like data, especially images. They are designed to learn spatial patterns such as ed
+
+[08] [prompt-v1] How do LSTM networks address the vanishing gradient problem?
+     LSTM networks address the vanishing gradient problem with gating mechanisms that control information flow through the network. These gates help preserve importa
+
+[09] [prompt-v2] What activation functions are commonly used in neural networks?
+     Common activation functions used in neural networks include **ReLU**, **sigmoid**, and **tanh**. These functions help introduce nonlinearity so the network can 
+
+[10] [prompt-v1] What is the role of pooling layers in CNNs?
+     Pooling layers in CNNs reduce spatial dimensions, which decreases computational complexity. They also help retain important features while downsampling the data
+
+[11] [prompt-v1] What is the transformer architecture?
+     The transformer architecture uses self-attention mechanisms and processes entire sequences in parallel. It was introduced in the 2017 paper "Attention Is All Yo
+
+[12] [prompt-v2] What are word embeddings?
+     Word embeddings are dense vector representations of words, where each word is mapped to a numerical vector in a continuous space. Words with similar meanings ar
+
+[13] [prompt-v1] What is transfer learning in NLP?
+     Transfer learning in NLP often means pre-training large models on massive corpora and then fine-tuning them on downstream tasks. This lets a model learn general
+
+[14] [prompt-v2] How does BERT handle language understanding?
+     BERT handles language understanding by using a **bidirectional transformer** architecture, which lets it consider the **context from both the left and right sid
+
+[15] [prompt-v1] What is self-attention in transformers?
+     Self-attention is a mechanism that allows a transformer to weigh the importance of different words relative to each other in a sequence. It helps the model proc
+
+[16] [prompt-v2] What is GPT and how is it trained?
+     GPT stands for **Generative Pre-trained Transformer**. It is a type of large language model that generates text by predicting the **next token** based on the to
+
+[17] [prompt-v2] What is instruction tuning?
+     Instruction tuning is a fine-tuning method for pre-trained large language models where they are trained on datasets of instructions and corresponding desired ou
+
+[18] [prompt-v1] What is RLHF?
+     RLHF stands for Reinforcement Learning from Human Feedback. It uses human preferences to align large language models to be helpful, harmless, and honest.
+
+[19] [prompt-v2] What is chain-of-thought prompting?
+     Chain-of-thought prompting is a prompting technique that encourages a language model to work through a problem step by step rather than jumping straight to an a
+
+[20] [prompt-v1] What is the context length of GPT-4?
+     GPT-4 supports up to 128K tokens of context.
+
+[21] [prompt-v1] What is Retrieval-Augmented Generation?
+     Retrieval-Augmented Generation, or RAG, combines generative LLMs with retrieval from external knowledge bases to produce grounded, up-to-date answers. It uses a
+
+[22] [prompt-v2] What are the main components of a RAG pipeline?
+     The main components of a RAG pipeline are a **retriever** and a **generator**. The retriever searches an external document store or knowledge base for relevant 
+
+[23] [prompt-v1] What is dense retrieval?
+     Dense retrieval uses neural embeddings to encode queries and documents, then determines relevance by cosine similarity. It is a retrieval method used in RAG to 
+
+[24] [prompt-v2] Why is chunking strategy important in RAG?
+     Chunking strategy is important in RAG because it directly affects retrieval precision and whether retrieved text fits within the model’s context window. If chun
+
+[25] [prompt-v1] What advanced RAG techniques exist beyond basic retrieval?
+     Advanced RAG techniques include re-ranking, query expansion, HyDE, and iterative retrieval for multi-hop questions. These go beyond basic retrieval to improve r
+
+[26] [prompt-v2] What are vector databases used for?
+     Vector databases are used to store and query high-dimensional vector embeddings so systems can perform fast similarity search. They’re commonly used for tasks l
+
+[27] [prompt-v2] What is FAISS?
+     FAISS is a library for efficient similarity search over vector embeddings, especially in high-dimensional spaces. It supports both exact and approximate nearest
+
+[28] [prompt-v2] How do text embeddings capture semantic meaning?
+     Text embeddings capture semantic meaning by converting words, sentences, or documents into dense vectors in a high-dimensional space. In this space, texts with 
+
+[29] [prompt-v2] What is HNSW?
+     HNSW stands for **Hierarchical Navigable Small World**. It is an **approximate nearest neighbor search** algorithm that builds a **hierarchical graph** of vecto
+
+[30] [prompt-v2] What is hybrid search in vector databases?
+     Hybrid search in vector databases combines **dense vector search** with **sparse keyword search** to improve retrieval quality. Dense search uses text embedding
+
+[31] [prompt-v2] What is LangChain?
+     LangChain is an open-source framework for building LLM applications. It provides abstractions for composing workflows such as chains and agents, and for connect
+
+[32] [prompt-v1] What is LangChain Expression Language (LCEL)?
+     LangChain Expression Language, or LCEL, is a declarative way to compose chains using the pipe operator. It supports streaming, async, and batching.
+
+[33] [prompt-v2] What is LangGraph?
+     LangGraph is an extension of LangChain for building **stateful, multi-actor LLM applications** as **directed graphs**. It is especially useful when your applica
+
+[34] [prompt-v1] What memory types does LangChain support?
+     LangChain supports ConversationBufferMemory, ConversationSummaryMemory, ConversationWindowMemory, and vector store memory.
+
+[35] [prompt-v2] What are LangChain retrievers?
+     LangChain retrievers are components that fetch relevant documents from a data source in response to a user query. They are used to support retrieval-based workf
+
+[36] [prompt-v2] What is LangSmith?
+     LangSmith is a platform for debugging, testing, evaluating, and monitoring LLM applications through automatic tracing. It records traces of each component in a 
+
+[37] [prompt-v1] What information do LangSmith traces capture?
+     LangSmith traces capture inputs, outputs, latency, token usage, and errors for every component in a chain.
+
+[38] [prompt-v2] What is the LangSmith Prompt Hub?
+     The **LangSmith Prompt Hub** is a repository for **storing, versioning, and sharing prompt templates**. It is designed to help teams manage prompts more effecti
+
+[39] [prompt-v2] How does LangSmith help monitor production LLM applications?
+     LangSmith helps monitor production LLM applications by providing visibility into key operational metrics such as latency percentiles, error rates, token costs, 
+
+[40] [prompt-v2] What are LangSmith datasets used for?
+     LangSmith datasets are used for **systematic evaluation** of LLM applications. They contain **example inputs and expected outputs** so you can compare model ver
+
+[41] [prompt-v1] What is RAGAS?
+     RAGAS is an open-source framework for evaluating RAG pipelines using LLM-based reference-free metrics. It measures things like faithfulness, answer relevancy, a
+
+[42] [prompt-v2] How does RAGAS compute faithfulness?
+     RAGAS computes **faithfulness** by first **extracting claims from the generated answer** and then **checking whether each claim can be inferred from the retriev
+
+[43] [prompt-v2] What is answer relevancy in RAGAS?
+     In RAGAS, **answer relevancy** measures how well the generated answer addresses the original user question. It does this by **generating synthetic questions fro
+
+[44] [prompt-v1] What is context recall in RAGAS?
+     Context recall in RAGAS measures how well the retrieved context covers the information needed. It is evaluated against a ground truth reference.
+
+[45] [prompt-v2] What inputs does RAGAS evaluation require?
+     RAGAS evaluation requires **user queries, generated answers, and retrieved contexts provided as a list of passages**. It can also use **reference answers option
+
+[46] [prompt-v1] What is Guardrails AI?
+     Guardrails AI is an open-source framework for adding validation and safety checks to LLM outputs with configurable on-fail actions. It helps enforce safer, more
+
+[47] [prompt-v1] What is PII and why is it important to detect in LLM responses?
+     PII means Personally Identifiable Information. It is important to detect in LLM responses because exposing it can violate privacy regulations such as GDPR and H
+
+[48] [prompt-v2] What does structured output validation ensure?
+     Structured output validation ensures that LLM responses conform to an expected schema or format, such as valid JSON. It helps detect when outputs are malformed 
+
+[49] [prompt-v2] What is Constitutional AI?
+     Constitutional AI is a technique where a model is given a set of principles or rules to follow, then uses self-critique and revision to improve its responses. T
+
+[50] [prompt-v2] What are common AI safety concerns with LLMs?
+     Common AI safety concerns with LLMs include **hallucination** (generating false or unsupported information), **toxicity**, **bias**, **PII leakage** (revealing 
+
+Routing summary: prompt-v1=19, prompt-v2=31
+Additional traces sent to LangSmith project 'Lab22'.
